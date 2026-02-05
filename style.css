@@ -1,0 +1,108 @@
+:root {
+  --bg: #000;
+  --card: #111;
+  --accent: #1e90ff;
+  --text: #fff;
+  --muted: #aaa;
+  --glass: rgba(255,255,255,0.08);
+  --blur: blur(22px);
+}
+
+/* Apple iOS Light */
+body.light {
+  --bg: #f5f5f7;
+  --card: rgba(255,255,255,0.65);
+  --accent: #007aff;
+  --text: #000;
+  --muted: #555;
+  --glass: rgba(255,255,255,0.55);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, var(--bg), #111);
+  color: var(--text);
+  transition: 0.4s;
+}
+
+/* NAVBAR */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8%;
+  background: var(--glass);
+  backdrop-filter: var(--blur);
+}
+
+nav h2 span { color: var(--accent); }
+
+nav ul {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+
+nav a:hover { color: var(--accent); }
+
+/* THEME BUTTON */
+.theme-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: var(--glass);
+  color: var(--text);
+  cursor: pointer;
+}
+
+/* SECTIONS */
+section, header {
+  padding: 100px 8%;
+}
+
+.glass {
+  background: var(--glass);
+  backdrop-filter: var(--blur);
+  border-radius: 28px;
+}
+
+/* CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 30px;
+}
+
+.card {
+  background: var(--card);
+  padding: 40px;
+  border-radius: 24px;
+  transition: 0.4s;
+}
+
+.card:hover { transform: translateY(-12px); }
+
+footer {
+  padding: 60px 8%;
+  border-top: 1px solid #222;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: var(--muted);
+}
